@@ -1,0 +1,3 @@
+[submodule "include/tinyosc"]
+	path = include/tinyosc
+	url = https://github.com/mhroth/tinyosc
