@@ -1,4 +1,4 @@
-// trackpadOSC.m
+// TrackpadOSC.m
 // Lingdong Huang 2018
 //
 // adapted from https://web.archive.org/web/20151012175118/http://steike.com/code/multitouch/
@@ -17,7 +17,7 @@
 
 #include <stdlib.h>
 
-#include "include/tinyosc.h"
+#include "include/tinyosc/tinyosc.h"
 
 typedef struct { float x,y; } mtPoint;
 typedef struct { mtPoint pos,vel; } mtReadout;
