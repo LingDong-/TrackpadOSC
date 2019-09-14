@@ -1,6 +1,6 @@
 # TrackpadOSC
 
-Send mac's multitouch trackpad read-out through OSC, so apps you make can be controlled with custom gestures.
+Send mac's multitouch trackpad read-out through [OSC](http://opensoundcontrol.org), so apps you make can be controlled with custom gestures.
 
 It's a really simple gluing together of [this Objective-C code](https://web.archive.org/web/20151012175118/http://steike.com/code/multitouch/) and the [tiny OSC library](https://github.com/mhroth/tinyosc).
 
@@ -80,4 +80,4 @@ Checkout the demos in `/demos` folder on more receiving and parsing details.
 
 - [tinyosc](https://github.com/mhroth/tinyosc) is used to send OSC data. If you want to modify OSC related things (e.g. you don't like the XML string and would like to send floats to different OSC addresses), check out that repo for the OSC functions.
 
-- Remember to turn of mac's system gestures so that they don't interfere, by going to System Preferences → Trackpad → More Gestures, and unchecking everything.
+- Remember to turn off mac's system gestures so that they don't interfere, by going to System Preferences → Trackpad → More Gestures, and unchecking everything.
