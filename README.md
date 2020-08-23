@@ -81,3 +81,6 @@ Checkout the demos in `/demos` folder on more receiving and parsing details.
 - [tinyosc](https://github.com/mhroth/tinyosc) is used to send OSC data. If you want to modify OSC related things (e.g. you don't like the XML string and would like to send floats to different OSC addresses), check out that repo for the OSC functions.
 
 - Remember to turn off mac's system gestures so that they don't interfere, by going to System Preferences → Trackpad → More Gestures, and unchecking everything.
+
+
+**Made possible with support from The [Frank-Ratchye STUDIO For Creative Inquiry](http://studioforcreativeinquiry.org/) at Carnegie Mellon University.**
