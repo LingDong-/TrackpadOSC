@@ -37,7 +37,7 @@ typedef struct {
 
 typedef void *MTDeviceRef;
 typedef int (*MTContactCallbackFunction)(int,Finger*,int,double,int);
-
+CFMutableArrayRef * MTDeviceCreateList();
 MTDeviceRef MTDeviceCreateDefault();
 void MTRegisterContactFrameCallback(MTDeviceRef, MTContactCallbackFunction);
 void MTDeviceStart(MTDeviceRef, int);
@@ -107,7 +107,12 @@ int main(int argc, char *argv[]) {
   inet_pton(AF_INET ,ip, &address.sin_addr);
   connect(fd, (struct sockaddr *)&address, sizeof(address));
   
-  MTDeviceRef dev = MTDeviceCreateDefault();
+  CFMutableArrayRef* deviceList = MTDeviceCreateList();
+  int num = (int)CFArrayGetCount((CFArrayRef)deviceList);
+  MTDeviceRef dev;
+//  dev = MTDeviceCreateDefault();
+  dev = (MTDeviceRef)CFArrayGetValueAtIndex( (CFArrayRef) deviceList, num-1);
+  
   MTRegisterContactFrameCallback(dev, callback);
   MTDeviceStart(dev, 0);
   printf("streaming multitouch information to IP '%s' at port '%d'... (ctrl-c to abort)\n", ip, port);
