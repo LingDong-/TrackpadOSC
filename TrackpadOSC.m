@@ -45,7 +45,7 @@ void MTDeviceStart(MTDeviceRef, int);
 
 int fd;
 
-char log_info[2048];
+char log_info[4096];
 char log_tmp[512];
 
 int callback(int device, Finger *data, int nFingers, double timestamp, int frame) {
@@ -76,7 +76,7 @@ int callback(int device, Finger *data, int nFingers, double timestamp, int frame
   }
   strcat(log_info,"</multitouch>");
   //puts(log_info);
-  char buffer[2048];
+  char buffer[4096];
   int len = tosc_writeMessage(buffer, sizeof(buffer),"/trackpad", "s", log_info);
   send(fd, buffer, len, 0);
   
